@@ -31,10 +31,10 @@
 </div>
 
 <section class="contact-block">
-<div class="map">
+<!-- <div class="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d46221.28623540964!2d3.8391499918508725!3d43.610073001851895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xad8756742894e802!2sMontpellier!5e0!3m2!1sfr!2sfr!4v1649140702365!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-<!-- Contact section -->
+</div> -->
+<!-- Contact section
 <section class="contact" id="contact">
     <form name="myForm" onsubmit="return validateForm()" action=”mailto:chrlmztt@gmail.com” method="post">
         <h3>Contact me</h3>
@@ -43,7 +43,7 @@
             <input type="email" name="email" placeholder="email">
         </div>
         <div class="inputBox">
-            <input type="number" name="number" placeholder="number">
+            <input type="TEXT" name="number" placeholder="number">
             <input type="text" name="subject" placeholder="subject">
         </div>
         <textarea name="" placeholder="message" id="" cols="30" rows="10"></textarea>
@@ -52,8 +52,28 @@
     </form>
     </section>
         <!-- Contact section -->
-    </section>
+    <!-- </section> -->
 
+    <div class="contact">
+
+        <!-- FORMULAIRE -->
+        <form method="post" action="contact.php">
+            <p>Contactez-moi</p>
+            <input type="email" name="email" placeholder="email"><br>
+            <input type="text" name="nom" placeholder="Nom Prénom"><br>
+            <input type="text" name="objet" placeholder="Objet"><br>
+            <textarea name="" name="message"  placeholder="Votre message" rows="15"></textarea>
+            <input type="submit" name="envoyer" value="Envoyer">
+        </form>
+
+        <!-- OMBRES -->
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+    </div>
+    </section>
 
       <!-- FOOTER -->
       <footer class="footer">
