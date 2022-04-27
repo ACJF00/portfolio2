@@ -82,31 +82,21 @@ header {
     flex-flow: wrap;
     justify-content: center;
     align-items: center;
-    h1 {
-            // font-size:26px; 
-            // font-weight:700;  
-            // letter-spacing:1px; 
-            // text-transform:uppercase; 
-            // width:160px; 
-            // text-align:center; 
-            // margin:auto; 
-            // white-space:nowrap; 
-            // padding-bottom:13px;
-        &:before {
-            background-color: $progressbar;
-            content: '';
-            display: block;
-            height: 3px;
-            margin-bottom: 5px;
-        }
-        &:after {
-            background-color: $progressbar;
-            content: '';
-            display: block;
-            height: 3px;
-            margin-bottom: 0.25em;
-        }
-    }
+}
+
+.general-title:before {
+    background-color: $progressbar;
+    content: '';
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+}
+.general-title:after {
+    background-color: $progressbar;
+    content: '';
+    display: block;
+    height: 3px;
+    margin-bottom: 0.25em;
 }
 
 #apropos {

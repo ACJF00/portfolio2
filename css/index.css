@@ -80,14 +80,16 @@ header .navbar a:hover {
   justify-content: center;
   align-items: center;
 }
-.container h1:before {
+
+.general-title:before {
   background-color: #ECFFB0;
   content: "";
   display: block;
   height: 3px;
   margin-bottom: 5px;
 }
-.container h1:after {
+
+.general-title:after {
   background-color: #ECFFB0;
   content: "";
   display: block;
