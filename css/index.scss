@@ -217,6 +217,7 @@ header {
     padding-bottom: 2em;
     background-color: $menus;
     color: $txt-color;
+    margin-top: 3rem;
     .social-networks {
     width: 70%;
     display: flex;
@@ -470,6 +471,7 @@ header {
             animation-name: Menu;
             animation-duration: 400ms;
             margin-top: 1em;
+            height: 90%;
         .container {
             grid-template-columns: 1fr;
             gap: 0;

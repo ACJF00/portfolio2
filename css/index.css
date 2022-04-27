@@ -207,6 +207,7 @@ header .navbar a:hover {
   padding-bottom: 2em;
   background-color: #2E3445;
   color: #FAFFD8;
+  margin-top: 3rem;
 }
 .footer .social-networks {
   width: 70%;
@@ -398,6 +399,7 @@ header .navbar a:hover {
     animation-name: Menu;
     animation-duration: 400ms;
     margin-top: 1em;
+    height: 90%;
   }
   nav.navbar.active .container {
     grid-template-columns: 1fr;
