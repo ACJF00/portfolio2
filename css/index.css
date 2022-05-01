@@ -71,7 +71,7 @@ header .navbar a:hover {
 }
 #scroll_to_top a {
   font-size: 2.1em;
-  color: #ECFFB0;
+  color: #FAFFD8;
 }
 
 .container {
@@ -79,6 +79,7 @@ header .navbar a:hover {
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
+  padding: 2em 0em;
 }
 
 .general-title:before {
@@ -86,7 +87,6 @@ header .navbar a:hover {
   content: "";
   display: block;
   height: 3px;
-  margin-bottom: 5px;
 }
 
 .general-title:after {
@@ -97,60 +97,71 @@ header .navbar a:hover {
   margin-bottom: 0.25em;
 }
 
-#apropos .section-title {
+#banner-title {
   background-color: #2E3445;
+}
+#banner-title .section-title {
   width: 100%;
-  margin-top: -8rem;
-  padding-top: 11rem;
   color: #FAFFD8;
   text-align: center;
 }
-#apropos .section-title h1 {
+#banner-title .section-title h1 {
   font-size: 3.5em;
   font-weight: 100;
 }
-#apropos .section-title p {
+#banner-title .section-title p {
   font-size: 2em;
   font-weight: 900;
   text-transform: uppercase;
 }
-#apropos .photo {
-  padding-top: 3rem;
+
+#a-propos {
+  display: flex;
+  flex-direction: column;
 }
-#apropos .photo #my-photo {
+#a-propos .a-propos-container {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  justify-content: center;
+}
+#a-propos .a-propos-container img {
   border-radius: 50%;
   object-fit: cover;
 }
-#apropos .presentation {
+#a-propos .a-propos-container .presentation {
   max-width: 40em;
   padding-top: 3rem;
 }
-#apropos .presentation p {
+#a-propos .a-propos-container .presentation p {
   margin: 2em;
 }
 
-.competences-content {
+#competences {
+  background-color: #2E3445;
+}
+#competences .competences-content {
   display: flex;
   justify-content: space-evenly;
 }
-.competences-content .competences-txt {
+#competences .competences-content .competences-txt {
   width: 40%;
   align-self: center;
 }
-.competences-content .skillsdetails {
+#competences .competences-content .skillsdetails {
   width: 40%;
 }
-.competences-content .skillsdetails .chart {
+#competences .competences-content .skillsdetails .chart {
   display: flex;
   flex-direction: column;
   height: 3em;
   justify-content: space-around;
 }
-.competences-content .skillsdetails .chart footer {
+#competences .competences-content .skillsdetails .chart footer {
   height: 0.3em;
   background-color: #373737;
 }
-.competences-content .skillsdetails .chart footer div {
+#competences .competences-content .skillsdetails .chart footer div {
   width: 0%;
   height: 100%;
   background-color: #ECFFB0;
@@ -207,7 +218,6 @@ header .navbar a:hover {
   padding-bottom: 2em;
   background-color: #2E3445;
   color: #FAFFD8;
-  margin-top: 3rem;
 }
 .footer .social-networks {
   width: 70%;
@@ -226,7 +236,68 @@ header .navbar a:hover {
 .footer .social-networks a:hover {
   color: #ECFFB0;
 }
+.footer .infos button a {
+  text-decoration: none;
+  color: black;
+}
 
+#button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.primary-button {
+  position: relative;
+  border: 2px solid #ffffff;
+  border-radius: 500px;
+  width: 250px;
+  height: 48px;
+  overflow: hidden;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 0;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  border: 2px solid #ECFFB0;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+  background-color: #ECFFB0;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  z-index: -1;
+  animation: scale-down 0.2s forwards;
+  -webkit-animation: scale-down 0.2s forwards;
+}
+
+.animate .round {
+  animation: scale-up 0.5s forwards;
+  -webkit-animation: scale-up 0.5s forwards;
+}
+
+@keyframes scale-up {
+  to {
+    transform: scale(600);
+  }
+}
+@keyframes scale-down {
+  from {
+    transform: scale(600);
+  }
+  to {
+    transform: scale(0);
+  }
+}
 .contact-block {
   width: 100%;
   display: flex;
@@ -420,13 +491,12 @@ header .navbar a:hover {
   .competences-content {
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
   .competences-content .competences-txt {
-    width: 70%;
+    width: 70% !important;
   }
   .competences-content .skillsdetails {
-    width: 70%;
+    width: 70% !important;
   }
 
   #portfolio {

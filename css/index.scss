@@ -73,7 +73,7 @@ header {
     z-index: 1;
     a {
         font-size: 2.1em;
-        color: #ECFFB0;
+        color: $txt-color;
     }
   }
 
@@ -82,6 +82,7 @@ header {
     flex-flow: wrap;
     justify-content: center;
     align-items: center;
+    padding: 2em 0em;
 }
 
 .general-title:before {
@@ -89,7 +90,6 @@ header {
     content: '';
     display: block;
     height: 3px;
-    margin-bottom: 5px;
 }
 .general-title:after {
     background-color: $progressbar;
@@ -99,12 +99,10 @@ header {
     margin-bottom: 0.25em;
 }
 
-#apropos {
+#banner-title {
+    background-color: $menus;
     .section-title {
-        background-color: $menus;
         width: 100%;
-        margin-top: -8rem;
-        padding-top: 11rem;
         color: $txt-color;
         text-align: center;
         h1 {
@@ -117,23 +115,31 @@ header {
             text-transform: uppercase;
         }
     }
-    .photo {
-        padding-top: 3rem;
-        #my-photo {
-            border-radius: 50%;
-            object-fit: cover;
-        }
-    }
-    .presentation {
-        max-width: 40em;
-        padding-top: 3rem;
-        p {
-            margin: 2em;
+}
+#a-propos {
+    display: flex;
+    flex-direction: column;
+    .a-propos-container {
+        display: flex;
+    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
+            img {
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        .presentation {
+            max-width: 40em;
+            padding-top: 3rem;
+            p {
+                margin: 2em;
+            }
         }
     }
 }
 
-
+#competences {
+        background-color: #2E3445;
 .competences-content {
     display: flex;
     justify-content: space-evenly;
@@ -162,6 +168,7 @@ header {
             }
         }
     }
+}
 }
 
 @keyframes progressBar {
@@ -217,7 +224,6 @@ header {
     padding-bottom: 2em;
     background-color: $menus;
     color: $txt-color;
-    margin-top: 3rem;
     .social-networks {
     width: 70%;
     display: flex;
@@ -235,7 +241,96 @@ header {
         color: $txt-hover;
     }
     }
+    .infos {
+        button {
+                // display: flex;
+                // height: 10vh;
+                // flex-direction: row;
+                // justify-content: center;
+                // align-items: center;
+            // padding: 1em;
+            // border-radius: 2em;
+            // background: $txt-color;
+            // border: none;
+            // &:hover{
+            //     -webkit-transform:scale(1.1); /* Safari et Chrome */
+            //     -moz-transform:scale(1.1); /* Firefox */
+            //     -ms-transform:scale(1.1); /* Internet Explorer 9 */
+            //     -o-transform:scale(1.1); /* Opera */
+            //     transform:scale(1.1);
+            //     transition: all 200ms;
+            //     background-color: $txt-hover;
+            // }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
 }
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.primary-button {
+    position: relative;
+    border: 2px solid #ffffff;
+    border-radius: 500px;
+    width: 250px;
+    height: 48px;
+    overflow: hidden;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    z-index: 0;
+}
+
+.primary-button:hover {
+    cursor: pointer;
+    border: 2px solid $txt-hover;
+    color: black;
+}
+.round {
+    border-radius: 50%;
+    background-color: $txt-hover;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: -1;
+    animation: scale-down 0.2s forwards;
+    -webkit-animation: scale-down 0.2s forwards;
+}
+
+.animate {
+        .round {
+            animation: scale-up 0.5s forwards;
+            -webkit-animation: scale-up 0.5s forwards;
+        }
+    }
+
+
+@keyframes scale-up {
+    to {
+        transform: scale(600);
+    }
+}
+
+@keyframes scale-down {
+    from {
+        transform: scale(600);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+ 
 
 // CONTACT PAGE //
 
@@ -386,53 +481,6 @@ header {
 
 // MEDIA QUERIES //
 
-// @media (max-width: 1024px) {
-//     #menu-bars {
-//         margin-top: 1em;
-//         font-size: 2em;
-//         z-index: 1;
-//         }
-//     .navbar {
-//         position: absolute;
-//         top: 15%;
-//         width: 100%;
-//         display: none;
-//         a {
-//             display: flex;
-//             background: $menus;
-//             margin: 1.5rem;
-//             border-radius: 0.5rem;
-//             color: $txt-color;
-//             width: 10em;
-//             justify-content: center;
-//         }
-//     }
-//     // JS related CSS
-//     nav.navbar.active {
-//         display: flex;
-//         flex-direction: column;
-//         padding: 0;
-//         border-bottom: 3px $txt-color solid;
-//         height: 15em;
-//         animation-name: Menu;
-//         animation-duration: 400ms;
-//     .container {
-//         grid-template-columns: 1fr;
-//         gap: 0;
-//         .posts-container{
-//             .post {
-//                 .image {
-//                     height: 30rem;
-//                 } 
-//             }
-//         }
-//     }
-//     .footer {
-//         flex-flow: column;
-//         text-align: center;
-//     }
-// }
-// }
 
 @media (max-width: 1024px) {
     header {
@@ -496,12 +544,11 @@ header {
     .competences-content {
         flex-direction: column;
         align-items: center;
-        text-align: center;
         .competences-txt {
-            width: 70%;
+            width: 70% !important;
         }
         .skillsdetails {
-            width: 70%;
+            width: 70% !important;
         }
     }
 
