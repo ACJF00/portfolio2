@@ -439,6 +439,7 @@ header .navbar a:hover {
   header .icons {
     display: flex !important;
     justify-content: center;
+    background-color: #2E3445;
   }
   header .icons #menu-bars {
     margin-top: 1em;
